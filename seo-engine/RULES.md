@@ -60,6 +60,17 @@ Every page must include at least:
 Stat blocks must demonstrate data-backed authority (e.g., "73% of...", "2x growth...").
 Data tables must provide direct comparisons or structured values to avoid thin content.
 
+## Reinforcement Rules (Weekly)
+- No freestyling: Changes must be based on deterministic thresholds in `TASK_REINFORCE.md`.
+- Max re-optimizations per week: 4 pages.
+- Edits are additive: Do not remove existing content blocks unless explicitly replacing for CTR optimization.
+- Schema Update: Every re-optimization must refresh JSON-LD schema with updated `dateModified`.
+
+## Internal Linking Weights
+- **Top Performer Boost**: Enabled. Pages in the top 5 ranking positions (from `GSC_PULL.json`) receive 3x internal link priority.
+- **Upward Flow**: Support pages must link to their Pillar page + at least 1 "Top Performer" from its cluster.
+
+
 ## Site updates required
 
 - Update sitemap.xml with new URLs
