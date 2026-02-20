@@ -1,0 +1,49 @@
+{
+    "pillars": [
+        {
+            "name": "Pillar 1",
+            "slug": "",
+            "url": "",
+            "target_support_pages": 40,
+            "support_page_types": [
+                "how-to",
+                "problem-solution",
+                "comparison",
+                "best-practices",
+                "checklist",
+                "pricing",
+                "faq"
+            ]
+        },
+        {
+            "name": "Pillar 2",
+            "slug": "",
+            "url": "",
+            "target_support_pages": 40,
+            "support_page_types": [
+                "how-to",
+                "problem-solution",
+                "comparison",
+                "best-practices",
+                "checklist",
+                "pricing",
+                "faq"
+            ]
+        },
+        {
+            "name": "Pillar 3",
+            "slug": "",
+            "url": "",
+            "target_support_pages": 40,
+            "support_page_types": [
+                "how-to",
+                "problem-solution",
+                "comparison",
+                "best-practices",
+                "checklist",
+                "pricing",
+                "faq"
+            ]
+        }
+    ]
+}
