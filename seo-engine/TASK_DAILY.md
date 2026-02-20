@@ -24,3 +24,10 @@
    - STATE.json (increment support counts + update last_run)
 
 7. Commit directly to main.
+
+8. Post-Run Validation:
+   - Confirm all new files physically exist.
+   - Confirm sitemap.xml contains new URLs.
+   - Confirm REGISTRY.json matches actual created pages.
+   - Confirm no duplicate slugs exist.
+

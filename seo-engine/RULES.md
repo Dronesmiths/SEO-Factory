@@ -18,11 +18,45 @@
   - Up to its pillar page (1 exact match anchor)
   - To 2 sibling support pages already in registry
 
+## Internal Linking Quality
+Sibling links must:
+- Share topical similarity
+- Contain overlapping keywords
+- Be contextually relevant in paragraph form
+
+## Slug Safety
+Before creating a new page:
+1. Check if /blog/{slug}/ already exists.
+2. If it exists, abort and generate a new unique slug.
+3. Confirm slug does not already appear in REGISTRY.json.
+
+## Pillar Rotation
+If weekly_focus_slug has:
+- Exceeded 7 days since last rotation
+OR
+- Reached +10 new support pages
+
+Rotate to next slug in rotation_slugs array.
+
+## Sitemap Rules
+If sitemap.xml does not exist:
+- Create it with valid XML structure.
+
+When updating sitemap:
+- Preserve XML format.
+- Append new URLs without breaking structure.
+
+## Keyword Map Protection
+Before generating a topic:
+- Ensure primary keyword does not exist in KW_MAP.json.
+- Append keyword after creation.
+
 ## Site updates required
 - Update sitemap.xml with new URLs
 - Append new URLs to REGISTRY.json
 
 ## Commit rules
+
 - Commit directly to main
 - Commit message format:
   "SEO: add {N} support pages for {pillar_slug}"

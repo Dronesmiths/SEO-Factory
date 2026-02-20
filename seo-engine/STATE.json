@@ -3,5 +3,7 @@
     "daily_limit": 4,
     "rotation_slugs": [],
     "support_counts": {},
-    "last_run": ""
+    "last_run": "",
+    "rotation_mode": "manual",
+    "rotation_rule": "rotate after 7 days or 10 support pages"
 }
