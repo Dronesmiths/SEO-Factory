@@ -1,48 +1,34 @@
 {
     "pillars": [
         {
-            "name": "Pillar 1",
-            "slug": "",
-            "url": "",
+            "name": "E-A-T Strategy",
+            "slug": "eat-strategy",
+            "url": "/blog/eat-strategy/",
             "target_support_pages": 40,
             "support_page_types": [
                 "how-to",
-                "problem-solution",
-                "comparison",
-                "best-practices",
-                "checklist",
-                "pricing",
-                "faq"
+                "faq",
+                "checklist"
             ]
         },
         {
-            "name": "Pillar 2",
-            "slug": "",
-            "url": "",
+            "name": "Local SEO Optimization",
+            "slug": "local-seo",
+            "url": "/blog/local-seo/",
             "target_support_pages": 40,
             "support_page_types": [
                 "how-to",
-                "problem-solution",
-                "comparison",
-                "best-practices",
-                "checklist",
-                "pricing",
-                "faq"
+                "case-study"
             ]
         },
         {
-            "name": "Pillar 3",
-            "slug": "",
-            "url": "",
+            "name": "Technical Site Architecture",
+            "slug": "technical-seo",
+            "url": "/blog/technical-seo/",
             "target_support_pages": 40,
             "support_page_types": [
-                "how-to",
-                "problem-solution",
-                "comparison",
-                "best-practices",
                 "checklist",
-                "pricing",
-                "faq"
+                "guide"
             ]
         }
     ]

@@ -1,3 +1,18 @@
 {
-    "pages": []
+    "pages": [
+        {
+            "slug": "eat-strategy-checklist",
+            "url": "/blog/eat-strategy-checklist/",
+            "title": "Essential E-A-T Checklist for 2026",
+            "pillar": "eat-strategy",
+            "created": "2026-02-20"
+        },
+        {
+            "slug": "improving-eat-score",
+            "url": "/blog/improving-eat-score/",
+            "title": "How to Improve Your E-A-T Score",
+            "pillar": "eat-strategy",
+            "created": "2026-02-20"
+        }
+    ]
 }
