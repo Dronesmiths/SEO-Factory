@@ -1,5 +1,6 @@
 # Daily SEO Task
 
+0. **Lock Environment**: Run `python3 seo-engine/SCRIPTS/lock_manager.py acquire`.
 1. Load:
    - COMPANY.json
    - PILLARS.json
