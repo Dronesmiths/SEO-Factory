@@ -51,7 +51,17 @@ Before generating a topic:
 - Ensure primary keyword does not exist in KW_MAP.json.
 - Append keyword after creation.
 
+## Built-In Data Modules
+Every page must include at least:
+- 1 Stat Block (using `stat-block.html`)
+- 1 Data Comparison Table (using `data-table.html`)
+- 1 Internal Linking Section (using `internal-links-template.html`)
+
+Stat blocks must demonstrate data-backed authority (e.g., "73% of...", "2x growth...").
+Data tables must provide direct comparisons or structured values to avoid thin content.
+
 ## Site updates required
+
 - Update sitemap.xml with new URLs
 - Append new URLs to REGISTRY.json
 
