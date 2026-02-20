@@ -13,6 +13,20 @@
             "title": "How to Improve Your E-A-T Score",
             "pillar": "eat-strategy",
             "created": "2026-02-20"
+        },
+        {
+            "slug": "local-seo-visibility",
+            "url": "/blog/local-seo-visibility/",
+            "title": "Maximizing Local Visibility in 2026",
+            "pillar": "local-seo",
+            "created": "2026-02-20"
+        },
+        {
+            "slug": "hyper-local-keywords",
+            "url": "/blog/hyper-local-keywords/",
+            "title": "Hyper-Local Keyword Mapping for 2026",
+            "pillar": "local-seo",
+            "created": "2026-02-20"
         }
     ]
 }
