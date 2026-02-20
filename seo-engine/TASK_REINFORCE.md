@@ -19,12 +19,13 @@ Apply the following deterministic logic:
 - **Link Score**: Boost internal linking weight for pages in the top 5 ranking positions to protect their lead.
 
 ## Step 4: Region-Locked Execution
-1. **Hash**: Calculate the "Skeleton Hash" of `/blog/{slug}/index.html` using `SCRIPTS/verify_integrity.py`.
+1. **Hash**: Calculate the "Skeleton Hash" of `/blog/{slug}/index.html` using `SCRIPTS/verify_integrity.py {slug}`.
 1. **Extract**: Match existing `REGION` content using regex: `<!-- START:REGION:(.*?) -->(.*?)<!-- END:REGION:\1 -->`.
 2. **Transform**: Run Re-Optimization Prompt on extracted regions only.
 3. **Replace**: Re-insert the newly optimized content back into the exact same file position.
-4. **Safety Check**: Run `SCRIPTS/verify_integrity.py` again. Compare against original hash.
+4. **Safety Check**: Run `SCRIPTS/verify_integrity.py {slug}` again.
 5. **Update**: Finalize `/blog/{slug}/index.html`. If hash fails, ABORT and rollback.
+
 
 
 

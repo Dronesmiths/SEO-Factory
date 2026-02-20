@@ -2,48 +2,51 @@ import re
 import hashlib
 import sys
 import os
+import json
+
+REGISTRY_PATH = "seo-engine/REGISTRY.json"
 
 def get_skeleton_hash(file_path):
-    """
-    Extracts all content OUTSIDE of REGION tags and returns its SHA-256 hash.
-    """
     with open(file_path, 'r', encoding='utf-8') as f:
         content = f.read()
-    
-    # Regex to find all text between START and END regions inclusive
-    # We remove the content to leave the "skeleton"
     skeleton = re.sub(r'<!-- START:REGION:.*? -->.*?<!-- END:REGION:.*? -->', '[REGION]', content, flags=re.DOTALL)
-    
-    # Return hash of the skeleton
     return hashlib.sha256(skeleton.encode('utf-8')).hexdigest()
 
+def verify_by_slug(slug):
+    if not os.path.exists(REGISTRY_PATH):
+        print("Error: Registry not found.")
+        return False
+    
+    with open(REGISTRY_PATH, 'r') as f:
+        registry = json.load(f)
+    
+    page = next((p for p in registry['pages'] if p['slug'] == slug), None)
+    if not page or 'skeleton_hash' not in page:
+        print(f"Error: No hash found for slug {slug}")
+        return False
+    
+    file_path = page['url'].lstrip('/') + 'index.html'
+    return verify_integrity(file_path, page['skeleton_hash'])
+
 def verify_integrity(file_path, original_hash):
-    """
-    Verifies that the current skeleton hash matches the original hash.
-    """
     current_hash = get_skeleton_hash(file_path)
     if current_hash == original_hash:
         print(f"✅ Integrity Verified: {file_path}")
         return True
     else:
-        print(f"❌ INTEGRITY FAILURE: Skeleton of {file_path} has drifted!")
-        print(f"Expected: {original_hash}")
-        print(f"Actual:   {current_hash}")
+        print(f"❌ INTEGRITY FAILURE: {file_path} has drifted!")
         return False
 
 if __name__ == "__main__":
-    if len(sys.argv) < 3:
-        print("Usage: python verify_integrity.py <file_path> <original_hash>")
+    if len(sys.argv) < 2:
+        print("Usage: python verify_integrity.py <slug> OR <file_path> <hash>")
         sys.exit(1)
     
-    file_path = sys.argv[1]
-    original_hash = sys.argv[2]
-    
-    if not os.path.exists(file_path):
-        print(f"Error: File {file_path} not found.")
-        sys.exit(1)
-        
-    if verify_integrity(file_path, original_hash):
-        sys.exit(0)
+    if len(sys.argv) == 2:
+        # Verify by slug
+        if verify_by_slug(sys.argv[1]): sys.exit(0)
+        else: sys.exit(1)
     else:
-        sys.exit(1)
+        # Traditional verify
+        if verify_integrity(sys.argv[1], sys.argv[2]): sys.exit(0)
+        else: sys.exit(1)
