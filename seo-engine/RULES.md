@@ -70,6 +70,13 @@ Data tables must provide direct comparisons or structured values to avoid thin c
 - **Top Performer Boost**: Enabled. Pages in the top 5 ranking positions (from `GSC_PULL.json`) receive 3x internal link priority.
 - **Upward Flow**: Support pages must link to their Pillar page + at least 1 "Top Performer" from its cluster.
 
+## Region Boundary Enforcement (Critical)
+- **Immutable Boundaries**: Content outside of `<!-- START:REGION:X -->` and `<!-- END:REGION:X -->` markers is technically immutable.
+- **Rule of Extraction**: The engine may ONLY modify the string between these markers.
+- **Pre-Commit Check**: Any modification that breaks or moves a `REGION` tag marker is an invalid output.
+- **Manual Edit Protection**: Human comments or custom scripts placed OUTSIDE regions must remain untouched by all automated cycles.
+
+
 
 ## Site updates required
 

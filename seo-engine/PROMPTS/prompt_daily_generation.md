@@ -26,9 +26,11 @@ Generate content for up to 4 support pages as defined in TASK_DAILY.md.
      - Include 1 **Data Table** (TEMPLATES/data-table.html) with relevant comparisons.
      - Include 1 **Internal Linking Section** (TEMPLATES/internal-links-template.html).
    - Integrate content into the provided layout tags.
+   - **Critical**: Every block must be wrapped in its corresponding `<!-- START:REGION:TAG -->` and `<!-- END:REGION:TAG -->` marker as defined in TEMPLATES.
    - Ensure it's at least 1200 words.
-   - Include a 5-question FAQ at the bottom.
+   - Include a 5-question FAQ at the bottom (wrapped in `<!-- START:REGION:FAQ -->`).
    - Link up to the pillar page and 2 sibling pages from REGISTRY.json.
-4. Output the raw HTML code for each page.
+4. Output the raw HTML code for each page, inclusive of all region markers.
 5. Provide the updated REGISTRY.json entry.
+
 

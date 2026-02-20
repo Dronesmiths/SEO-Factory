@@ -18,11 +18,13 @@ Apply the following deterministic logic:
 - **Authority Flow**: New pages generated during the daily cycle MUST link to pages flagged as "Top Performers" in `GSC_PULL.json`.
 - **Link Score**: Boost internal linking weight for pages in the top 5 ranking positions to protect their lead.
 
-## Step 4: Execution Cycle
-1. Run Re-Optimization Prompt.
-2. Update `/blog/{slug}/index.html` (Additive changes only).
-3. Log changes in `REGISTRY.json` (`last_optimized` field).
-4. Commit to `main`.
+## Step 4: Region-Locked Execution
+1. **Extract**: Match existing `REGION` content using regex: `<!-- START:REGION:(.*?) -->(.*?)<!-- END:REGION:\1 -->`.
+2. **Transform**: Run Re-Optimization Prompt on extracted regions only.
+3. **Replace**: Re-insert the newly optimized content back into the exact same file position.
+4. **Safety Check**: Compare the hash of the content OUTSIDE the markers to ensure zero drift.
+5. **Update**: Finalize `/blog/{slug}/index.html`.
+
 
 ## Constraints
 - Max 4 page re-optimizations per cycle.

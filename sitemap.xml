@@ -20,4 +20,12 @@
     <loc>https://example.com/blog/hyper-local-keywords/</loc>
     <lastmod>2026-02-20</lastmod>
   </url>
+  <url>
+    <loc>https://example.com/blog/core-web-vitals-2026/</loc>
+    <lastmod>2026-02-20</lastmod>
+  </url>
+  <url>
+    <loc>https://example.com/blog/semantic-html-seo/</loc>
+    <lastmod>2026-02-20</lastmod>
+  </url>
 </urlset>
