@@ -1,22 +1,22 @@
 {
-  "company_name": "Test Company",
+  "company_name": "REPLACE_WITH_COMPANY_NAME",
   "domain": "https://example.com",
-  "brand_tone": "friendly, confident, non-salesy",
-  "primary_location": "United States",
+  "brand_tone": "professional, authoritative, helpful",
+  "primary_location": "Global",
   "services": [
-    "SEO Services",
-    "Website Development"
+    "Service A",
+    "Service B"
   ],
   "unique_value_props": [
-    "Fast deployment",
-    "Data-driven growth"
+    "Value Prop 1",
+    "Value Prop 2"
   ],
   "primary_cta": {
     "label": "Get Started",
-    "url": "https://example.com/contact/"
+    "url": "/contact/"
   },
   "secondary_cta": {
     "label": "Learn More",
-    "url": "https://example.com/services/"
+    "url": "/services/"
   }
 }

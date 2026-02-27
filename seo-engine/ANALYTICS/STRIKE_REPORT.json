@@ -1,53 +1,7 @@
 {
-  "generated_at": "2026-02-27",
-  "low_ctr_pages": [
-    {
-      "page": "/blog/low-ctr/",
-      "query": "low ctr keyword",
-      "position": 5.0,
-      "ctr": 0.01,
-      "impressions": 500
-    }
-  ],
-  "strike_zone_pages": [
-    {
-      "page": "/blog/strike-zone/",
-      "query": "strike zone keyword",
-      "position": 10.0,
-      "ctr": 0.05,
-      "impressions": 300
-    },
-    {
-      "page": "/blog/rising/",
-      "query": "rising keyword",
-      "position": 15.0,
-      "ctr": 0.05,
-      "impressions": 200
-    }
-  ],
-  "top_performers": [
-    {
-      "page": "/blog/top-performer/",
-      "query": "top performer keyword",
-      "position": 2.0,
-      "ctr": 0.1,
-      "impressions": 1000
-    },
-    {
-      "page": "/blog/low-ctr/",
-      "query": "low ctr keyword",
-      "position": 5.0,
-      "ctr": 0.01,
-      "impressions": 500
-    }
-  ],
-  "rising_queries": [
-    {
-      "page": "/blog/rising/",
-      "query": "rising keyword",
-      "position": 15.0,
-      "ctr": 0.05,
-      "impressions": 200
-    }
-  ]
+  "generated_at": "YYYY-MM-DD",
+  "low_ctr_pages": [],
+  "strike_zone_pages": [],
+  "top_performers": [],
+  "rising_queries": []
 }
