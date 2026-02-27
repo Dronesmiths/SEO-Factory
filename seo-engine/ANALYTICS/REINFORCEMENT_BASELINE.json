@@ -1,0 +1,20 @@
+{
+    "local-seo-visibility": {
+        "position_avg": 12.2,
+        "ctr_avg": 0.015,
+        "impressions_avg": 4500,
+        "timestamp": "2026-02-27"
+    },
+    "eat-strategy-checklist": {
+        "position_avg": 8.5,
+        "ctr_avg": 0.042,
+        "impressions_avg": 2100,
+        "timestamp": "2026-02-27"
+    },
+    "core-web-vitals-2026": {
+        "position_avg": 15.0,
+        "ctr_avg": 0.05,
+        "impressions_avg": 890,
+        "timestamp": "2026-02-27"
+    }
+}

@@ -72,6 +72,11 @@ Data tables must provide direct comparisons or structured values to avoid thin c
 
 ## Region Boundary Enforcement (Critical)
 - **Immutable Boundaries**: Content outside of `<!-- START:REGION:X -->` and `<!-- END:REGION:X -->` markers is technically immutable.
+- **Surgical Regions**:
+  - `HEAD`: Title and Meta Description (CTR Optimization).
+  - `INTENT`: H1 and intro paragraph (Featured Snippet/Intent matching).
+  - `BODY`: Main content sections (Content expansion).
+  - `FAQ`: 5-question FAQ block (Topical depth).
 - **Rule of Extraction**: The engine may ONLY modify the string between these markers.
 - **Pre-Commit Check**: Any modification that breaks or moves a `REGION` tag marker is an invalid output.
 - **Manual Edit Protection**: Human comments or custom scripts placed OUTSIDE regions must remain untouched by all automated cycles.

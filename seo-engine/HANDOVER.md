@@ -33,3 +33,16 @@ To drop this into a new project:
 ## 🧹 Maintenance
 - Delete `SCRIPTS/migrate_legacy_pages.py` after the first initialization (done).
 - Regularly pipe GSC data into `ANALYTICS/GSC_PULL.json` to trigger the reinforcement engine.
+
+## 📥 GSC Ingestion Pipeline
+The `/seo-engine/INGEST/sync_gsc.py` script automates the retrieval of GSC data.
+
+**Setup**:
+1.  Provide the service account JSON content via the `GSC_SERVICE_ACCOUNT_JSON` environment variable.
+2.  Ensure the domain in `COMPANY.json` matches the GSC property.
+
+**Run**:
+```bash
+python3 seo-engine/INGEST/sync_gsc.py
+```
+This will refresh `ANALYTICS/GSC_PULL.json` with the last 28 days of performance data.

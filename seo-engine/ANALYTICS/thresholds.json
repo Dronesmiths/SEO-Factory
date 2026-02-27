@@ -1,0 +1,10 @@
+{
+    "strike_zone": {
+        "min_pos": 8.0,
+        "max_pos": 15.0
+    },
+    "low_ctr_threshold": 0.02,
+    "min_impressions": 100,
+    "top_performer_threshold": 5.0,
+    "rising_query_threshold": 30.0
+}

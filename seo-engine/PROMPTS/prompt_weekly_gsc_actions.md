@@ -9,15 +9,17 @@ Load the following context:
 - RULES.md
 - STATE.json
 - REGISTRY.json
-- GSC_DATA (User-provided CSV or export)
+- REGISTRY.json
+- STRIKE_REPORT.json (Pre-filtered SEO opportunities)
 
 **Objective**:
-Identify opportunities to push pages from positions 8-20 into the top 5.
+Execute specific SEO reinforcements based on the curated opportunities in `STRIKE_REPORT.json`.
 
 **Instructions**:
-1. Filter queries with high impressions and position 8-20.
-2. Identify pages with high impressions but low Click-Through Rate (CTR).
-3. For each opportunity:
-   - Suggest 2-3 supporting pages to strengthen the topical cluster.
-   - Recommend internal link improvements towards the target page.
-4. Provide a plan for the upcoming week based on these findings.
+1.  **Low CTR Pages**: Focus on rewriting H1 tags and Meta Descriptions between `REGION` tags. Aim for high-impact, click-worthy language.
+2.  **Strike Zone Pages**: Expand the primary content within `REGION` tags by 300-500 words to deepen topical authority and capture the ranking.
+3.  **Top Performers**: Ensure these pages have the strongest internal linking profiles as defined in `RULES.md`.
+4.  **Rising Queries**: Identify if new sub-pages or "People Also Ask" sections should be added between `REGION` tags to support these emerging trends.
+
+**Action Plan**:
+Provide a structured list of re-optimization tasks for the upcoming week.
