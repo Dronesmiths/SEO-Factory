@@ -20,15 +20,23 @@ def get_site_url():
 def sync_gsc():
     # 1. Load Auth
     auth_json = os.environ.get("GSC_SERVICE_ACCOUNT_JSON")
-    if not auth_json:
-        print("❌ ERROR: GSC_SERVICE_ACCOUNT_JSON environment variable not set.")
-        return False
-
-    try:
-        creds_content = json.loads(auth_json)
-        creds = service_account.Credentials.from_service_account_info(creds_content)
-    except Exception as e:
-        print(f"❌ ERROR: Failed to parse credentials: {e}")
+    key_file = "GOOGLE KEYS/endless-terra-488018-c4-2f632c3b19ef.json"
+    
+    if auth_json:
+        try:
+            creds_content = json.loads(auth_json)
+            creds = service_account.Credentials.from_service_account_info(creds_content)
+        except Exception as e:
+            print(f"❌ ERROR: Failed to parse credentials from ENV: {e}")
+            return False
+    elif os.path.exists(key_file):
+        try:
+            creds = service_account.Credentials.from_service_account_file(key_file)
+        except Exception as e:
+            print(f"❌ ERROR: Failed to load credentials from {key_file}: {e}")
+            return False
+    else:
+        print("❌ ERROR: No GSC credentials found (ENV or File).")
         return False
 
     # 2. Identify Site
@@ -53,7 +61,7 @@ def sync_gsc():
     }
 
     try:
-        response = service.searchanalytics().query(siteProperty=site_url, body=request).execute()
+        response = service.searchanalytics().query(siteUrl=site_url, body=request).execute()
     except Exception as e:
         print(f"❌ ERROR: GSC API call failed: {e}")
         return False
